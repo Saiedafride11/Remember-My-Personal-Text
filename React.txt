@@ -1,0 +1,73 @@
+https://github.com/facebook/create-react-app
+or
+https://create-react-app.dev/docs/getting-started
+
+# 1 way React app install
+npx create-react-app my-app
+cd my-app
+npm start
+
+#2 way React app install
+git clone https://github.com/mdasif8393/programming
+cd programming
+ls
+npm i
+npm start
+
+#32 way React app install
+npm cache clear --force
+npm cache clean --force
+npm cache verify
+npm i -g npm
+npm i -g create-react-app
+npx create-react-app app-name
+---------------------------------------------------------------------------------
+npm start
+
+#New React Folder
+npx create-react-app recap
+
+cancel- (cntl+c)
+
+#netlify
+npm run build
+----------------------------------------------------------------------------------
+Adding Bootstrap React
+
+#way-1
+Adding Bootstrap - Create React App
+https://create-react-app.dev/docs/adding-bootstrap
+
+npm install --save bootstrap
+er por floder er src er modde index.js er modde ata paste kre dibo
+import 'bootstrap/dist/css/bootstrap.css';
+
+#way-2
+bootstrap cdn
+https://www.bootstrapcdn.com/
+er por floder er public er modde index.html er modde CDN ter link ta paste kre dibo
+
+#way-3
+react bootstrap
+https://react-bootstrap.github.io/getting-started/introduction
+npm install react-bootstrap bootstrap
+er por floder er src er modde index.js er modde ata paste kre dibo
+import 'bootstrap/dist/css/bootstrap.min.css';
+--------------------------------------------------------
+#react emmet javascript - google search
+{
+   "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+   }
+}
+--------------------------------------------------------
+#Extantion
+JavaScript (ES6) code snippets
+React Extension Pack
+Auto Import
+---------------------------------------------------------
+#rsc click + tab ---al structure comeing
+---------------------------------------------------------------------------------
+#Angular
+https://angular.io/guide/setup-local
+

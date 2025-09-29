@@ -1,0 +1,66 @@
+npx create-next-app@latest
+npm run dev
+
+Next.js snippets (extention)
+
+getServerSideProps
+getStaticProps
+getStaticPaths
+
+import { useRouter } from 'next/router';
+const router = useRouter()
+const { id } = router.query
+
+-------------------------
+legacyBehavior
+passHref
+<Link href={`/users/${user.id}`} legacyBehavior></Link>
+<Link href={`/users/${user.id}`} passHref></Link>
+
+----------------------------------------
+npm run build
+
+package.json e ja hbe (********* "build": "next build && next export" **********)
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
+  },
+
+
+-----------------------------------------
+// export const getServerSideProps = async (context) => {
+//       const res = await fetch('https://jsonplaceholder.typicode.com/posts/' + context.params.id);
+//       const newsItem = await res.json();
+    
+//       return{
+//         props: {
+//           newsItem
+//         }
+//       }
+//     }
+
+export const getStaticProps = async (context) => {
+      const res = await fetch('https://jsonplaceholder.typicode.com/posts/' + context.params.id);
+      const newsItem = await res.json();
+    
+      return{
+        props: {
+          newsItem
+        }
+      }
+    }
+    
+export const getStaticPaths = async () => {
+      const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+      const newsList = await res.json();
+      const ids = newsList.map(newsItem => newsItem.id);
+      const paths = ids.map(id => ({params: {id: id.toString()}}));
+    
+      return{
+      //   paths: [{params: {id: "1"}}]
+        paths,
+        fallback: false
+      }
+   }

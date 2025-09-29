@@ -1,0 +1,60 @@
+tsc -v
+npx tsc -v
+npx tsc -w (typescript warch mode e chole jabe)
+
+tsc script.ts ( typescript k, js e convert korte use hoi)
+npm i ts-node-dev ( ai package ta install korle, bar bar convert korte hbe na ts to js e)
+tsc ( folder korle js and ts alada, tahole config file e outDir and rootDir e folder korbo. pore just tsc command dilei hbe)
+
+
+npm init -y ( kunu package file toiri korte ata use korbo )
+npm i -g typescript
+or
+npm i --save-dev typescript
+
+
+npx tsc --init (tsconfig.js - file create)
+npx tsc index.ts (ts to js)
+npx tsc index.ts --watch
+npm i -D nodemon ( dev dependency hisebe nodemon install )
+
+npx create-react-app my-app --template typescript
+npm install --save typescript @types/node @types/react @types/react-dom @types/jest
+
+string, number, boolean, void, null
+type
+interface, implements
+union
+intersection
+enum 
+tuples
+generics
+HTMLInputElement
+
+type ButtonProps = {
+      children: React.ReactNode
+}
+---------------------
+https://www.typescriptlang.org/tsconfig
+https://www.typescriptlang.org/tsconfig#target
+https://www.typescriptlang.org/download
+https://www.typescriptlang.org/docs/handbook/2/everyday-types.html
+https://www.typescriptlang.org/docs/handbook/2/functions.html
+https://www.typescriptlang.org/docs/handbook/2/objects.html
+https://devhints.io/typescript
+https://devsonket.com/typescript
+https://www.typescriptlang.org/docs/handbook/enums.html
+
+**** typescript is a javascript super set
+------------------------------------------------
+optional type ( dilew hbe, na dilew hbe)--- c?:number 
+
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+React typescript
+--------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+npx create-react-app my-app --template typescript

@@ -1,0 +1,97 @@
+const express = require('express');
+const { MongoClient } = require('mongodb');
+const cors = require('cors')
+// const bodyParser = require('body-parser')
+const ObjectId = require('mongodb').ObjectId;
+
+
+const app = express();
+const port = process.env.PORT || 5000;
+
+app.use(cors())
+// app.use(bodyParser.json())
+// or
+app.use(express.json())
+
+
+app.get
+app.post
+app.put (update data)
+app.delete
+app.use
+
+app.all("*", (req, res) => {
+  res.send("No route found");
+});
+
+//put=data replace kore fele sob
+//patch=joto tuku dorker, toto tuku update kore
+
+req.baseUrl
+req.originalUrl
+req.path
+req.hostname
+req.ip
+req.method
+req.protocol
+req.cookies
+req.signedCookies
+req.secure
+req.body
+req.params.id
+req.query.search (users?search=mita&&order=asc)(users?email=mdsaied.afride@gmail.com)
+req.body  (**res.send(JSON.stringify(newUser))**) or (**res.json(newUser)**)
+-------------------------
+users/2?page=14&&size=15
+
+
+insertOne (insertedId)
+insertMany()
+deleteOne (deletedCount)
+updateOne (modifiedCount)
+findOne  (only)
+find({})  (All)
+
+const cursor = userCollection.find({})
+const users = cursor.toArray();
+
+const ObjectId = require('mongodb').ObjectId;
+const query = { _id: ObjectId(id)};
+const user = userCollection.findOne(query);
+const result = userCollection.deleteOne(query);
+
+limit()    [slice(0, 10)  === limit(10)]
+count()
+skip()
+$in
+
+
+axiosjs
+json web token (jwt)
+firebase jwt token
+npm install firebase-admin --save
+idToken
+
+
+/*
+one time:
+1. nodemon globally install
+2. mongodb atlas user, access
+3. Network access (ip address allow)
+Every projects:
+1. install mongodb, express, cors, dotenv
+2. import (require), mongodb
+3. copy uri (connection string)
+4. create the client (copy code from atlas)
+5. Create or get database access credentials (username, password)
+6. create .env file and add DB_USER and DB_PASS as environment variable
+7. Make sure you require (import) dotenv
+8. Convert URI string to a template string.
+9. Add DB_USER and DB_PASS in the connection URI string.
+10. Check URI string by using console.log
+11. Create async function run and call it by using run().catch(console.dir)
+12. add try and finally inside the run function.
+13. comment out await client.close() to keep the connection alive
+14. add await client.connect(); inside the try block
+15. use a console.log after the client.connect to ensure database is connected
+*/

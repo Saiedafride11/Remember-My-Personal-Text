@@ -1,0 +1,25 @@
+document.getElementById("my-heading").innerHTML = "Id Check";
+document.getElementsByClassName("heading4")[0].innerHTML = "Class Check";
+document.querySelector("#heading1").innerHTML = "QuerySelector Id Check";
+document.querySelector(".heading2").innerHTML = "QuerySelector Class Check";
+document.querySelectorAll("h1")[2].innerHTML = "QuerySelector Check";
+document.querySelector("a").innerHTML = "New Home javascript";
+document.querySelector("li a").innerHTML = "New Tutorial Javascript";
+document.querySelector(".my-div a").innerHTML = "New Contact Javascript";
+document.getElementsByTagName("h1")[3].innerHTML = "Tag Name Check";
+
+innerHTML, innerText, value, src, href
+this.innerHTML
+
+
+onclick, onchange, onblur, onsubmit, mouseover, mouseout, keypress
+
+createElement, createTextNode, appendChild, removeChild, insertBefore(newValue, beforeValue), removeAttribute
+
+event.target.value;
+event.target.name;
+event.key
+
+document.getElementById("my-div").classList;
+document.getElementById("my-div").classList.add("my-div-class-two");
+document.getElementById("my-div").classList.remove("my-div-class-two");

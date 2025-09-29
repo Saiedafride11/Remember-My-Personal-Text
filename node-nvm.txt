@@ -1,0 +1,6 @@
+nvm
+https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/
+https://github.com/coreybutler/nvm-windows/releases
+nvm use 22.19.0
+node -v
+nvm -v

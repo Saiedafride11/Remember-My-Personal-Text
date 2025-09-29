@@ -1,0 +1,12 @@
+.col>h2{column-$}+p>lorem5
+.player*6>img[src="images/players/player-$.png"]+h3{Top Player-$}
+.col-lg-3.col-md-4.col-sm-6.col-12*12>img.img-fluid[src="images/player-$.png"]+h3{player-$}+p>lorem5
+
+
+Home
+shift + Home
+shift + End
+cntl + alt + up / down
+cntl + left / right 
+cntl + shift + left / right 
+cntl + shift + p

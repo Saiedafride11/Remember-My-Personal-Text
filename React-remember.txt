@@ -1,0 +1,26 @@
+forEach
+props
+useState
+useEffect
+useParams
+useHistory (useNavigate v6)
+useLocation
+useRef
+useReducer
+reduce
+react router
+Link , useHistory
+
+
+
+const deviceId = localStorage.getItem('yt-remote-device-id')
+const deviceInfo = JSON.parse(deviceId)
+
+JSON.stringify
+localStorage.setItem('userId' , JSON.stringify({name:'anonta', propation:'actor'})
+
+
+
+AUTHENTICATION
+firebase
+Google Analytics

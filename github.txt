@@ -1,0 +1,95 @@
+echo "# delete" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/Saiedafride11/delete.git
+git push -u origin master
+
+remote origin already exists.
+git remote rm origin
+or
+git remote add origin git_link
+
+Gitgub teke file download kre, VSC re open kore
+npm i / npm install dibo
+
+git --version
+install hoise kina git software check korte
+dir | ls (Direction.. kutai kun file ase dekte)
+cd..  (dile folder 1 gor pichone jabe)
+cd folder name (dile 1 gor folder name asbe)
+D: \ F: (Pc Drive Change Korte Chaile)
+git clone CloneLink (github teke download na kre,clone korbo)
+cls (Clear Sereen)
+mkdir folder-Name (Folder banate chaile)
+echo Hello World > file.txt (Kunu File banate chaile)
+copy File-Name F:\Folder-Name (ak folder teke onno folder e nite)
+pwd | echo %cd% (directory dekte parbo)
+
+poershell/git/cmd-- windos, wsl/bash---lunux--------windows terminal
+
+git branch, git branch --list (Koita branch ase dekte)
+git branch Branch-Name (New Branch Create korte chaile)
+git checkout Switch-Branch-Name (ak branch teke onno branch e jete chaile)
+
+git add FileName (just file add hbe)
+git add -A (All add hobe)
+git commit -m "Change Text" (Ki ki Change korsi ta dekte)
+git push -u origin master, git push origin main, git push (github e push korte use korbo)
+
+gh-pages (github e ababe new branch kre link toiri korbo, link kaj na krle new link shes e "index.html" dibo)
+git pull  (Onno ra github e ki ki change korse , ta nijer pc te ante)
+git pull --all  (sokol pull ante, jeno kunu ta miss na hoi)
+git status  (koita modify lagbe dekte)
+git diff  (ki ki change koresi dekte, age fire jete just "q" dibo)
+git checkout develop  (akti branch teke onno akta branch e jete)
+git checkout -b BranchName  (nijer isse moto new branch kulte)
+
+git config user.email
+git config user.name
+git config --global user.email "yourmail@gmail.com"
+git config --global user.name "Your Name"
+
+
+git pull origin develop
+git branch afride
+git add .
+git commit -m "single team card simple update"
+git push origin afride ( issa moto j kunu branch e switch kore, code puah korte chaile )
+
+******* Mistake Node Modules*******
+যদি ভুলে node_modules ফোল্ডারটি   git add , commit , push  করে গিটহাবে আপলোড করে ফেলেন তাহলে .gitignore  এ  node_modules  দিলে কাজ করবেনা গিট ফোল্ডার এ ট্র্যাকড থাকার কারণে। সমাধান করার উপায়: 
+ ১।   git rm -r --cached node_modules
+ ২।  git commit -m "removing node_modules"
+৩।   git push  -f
+
+******* .gitignore*******
+file name: .gitignore
+file open & paste: node_modules/
+
+*******react netlify page not found*******
+npm run build ( build file create)
+public folder er vitore, index.html er sate (_redirects) name akta file kulbo and oi file er vitore
+(/*    /index.html   200) ata paste kredibo, tahole live linkkaj korbe
+
+******firebase hosting react router page not found on reload*******
+firebase.json file er vitore niser code ta dibo
+"rewrites": [ {
+      "source": "**",
+      "destination": "/index.html"
+    } ]
+
+***********************     private to public rep       **************************
+local akta folder kulbo, seta cmd te open korbo, tarpor
+git clone --bare PRIVATE-REPO-GIT-LINK
+cd NEW_CREATE_FOLDER.git ( jeita matro clone korsi, private git ta )
+github e new repo create and just git link ta nibo, tarpor
+git push --mirror NEW-CREATE-REPO-GIT-LINK
+----------
+git change origin url (google search)
+git remote -v (link koi koi ase dekte chaile)
+----------
+git remote set-url origin NEW-CREATE-REPO-GIT-LINK (ata korbo ager folder e duke, NEW_CREATE_FOLDER.git folder e giye)
+
+

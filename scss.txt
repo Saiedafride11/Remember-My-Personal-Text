@@ -1,0 +1,115 @@
+ npm i -g sass
+
+sass sass/style.scss css/style.css
+sass sass/style.scss css/style.css --watch
+
+Live Sass Compiler
+
+file er name er age(_) dile ata compile hobe na.
+@forward
+@use
+@mixin @include
+@extende
+@each $key
+
+
+
+// -----------------------------------------------
+// -----------------------------------------------
+.btn{
+      border: none;
+      padding: 15px 30px;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+}
+.btn-download{
+      @extend .btn;
+      background-color: red;
+}
+
+// -----------------------------------------------
+// -----------------------------------------------
+
+@mixin setFontSize($value){
+      @if $value == small{
+            font-size: 12px;
+      }
+      @else if $value == medium{
+            font-size: 16px;
+      }
+      @else if $value == large{
+            font-size: 20px;
+      }
+      @else{
+            font-size: none;
+      }
+}
+// #education p {
+//       @include paragraph-style;
+//       margin: 10px 0px;
+// }
+#education h6 {
+      @include setFontSize(small);
+}
+// -----------------------------------------------
+// -----------------------------------------------
+// @mixin paragraph-style{
+//       font-size: 16px;
+//       text-align: justify;
+// }
+@mixin paragraph-style($size, $style){
+      font-size: $size;
+      text-align: $style;
+}
+// #education p {
+//       @include paragraph-style;
+//       margin: 10px 0px;
+// }
+#education p {
+      @include paragraph-style(16px, justify);
+      margin: 10px 0px;
+}
+// -----------------------------------------------
+// -----------------------------------------------
+
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+header{
+      background: $header-bgColor;
+}
+nav{
+      margin-top: 15px;
+      ul{
+            list-style: none;
+            li{
+                  display: inline-block;
+                  margin: 0 15px;
+                  a{
+                        display: inline-block;
+                        color: #fff;
+                        text-decoration: none;
+                        padding: 10px;
+                        transition: 0.4s; 
+                        border-radius: 5px;
+                  }
+                  a:hover{
+                        background: #000;
+                  }
+            }
+      }
+}
+// -----------------------------------------------
+// -----------------------------------------------
+main{
+      background: $main-bgColor;
+}
+#about p{
+      font-size: $para-fontSize;
+}
+footer{
+      background: $footer-bgColor;
+}

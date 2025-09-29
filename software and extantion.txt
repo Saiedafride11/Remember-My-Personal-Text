@@ -1,0 +1,101 @@
+Vs code
+Git
+Node js
+Heroku
+PostMan
+
+Vs code extensions:
+auto import
+code runner
+eslint
+prettier -code formatter
+live server
+TabNine
+JavaScript (ES6) code snippets
+React Extension Pack
+Reactjs code snippets
+ES7 React/Redux/GraphQL/React-Native snippets
+Code Spell Checker
+HTML CSS Support
+Tailwind CSS IntelliSense
+Live Sass Compiler
+Thunder Client
+Auto Rename Tag
+npm Intellisense
+Path Intellisense
+Path Intellisense
+Snipped (cntl + shift + p - skinsrt)
+VSCode React Refactor
+
+
+cntl+shift+p = vs code settings
+Dracula Official (Theme)
+
+- react emmet in vsc code> google search
+- vsc>settings>preference>emmet> niser tesxt paste
+ "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    }
+----------------------------------------------
+search setting
+----------------------------------------------
+Default Formatter search - prettier code formatter select
+----
+eslint
+prettier -code formatter
+----
+settings.json e niser code ta rakbo
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.tslint": true,
+    "source.organizeImports": true
+  },
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false
+}
+----------------------------------------------
+vs code setting.json (cntl + shift + P)
+----------------------------------------------
+{
+  "workbench.colorTheme": "Learn with Sumit - Peace of the eye",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "tabnine.experimentalAutoImports": true,
+  "git.enableSmartCommit": true,
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "explorer.confirmDelete": false,
+  "editor.fontSize": 12,
+  "scm.inputFontSize": 12,
+  "debug.console.fontSize": 12,
+  "markdown.preview.fontSize": 12,
+  "terminal.integrated.fontSize": 10,
+  "tailwindCSS.rootFontSize": 12,
+  "window.zoomLevel": 2,
+  "editor.accessibilityPageSize": 5,
+  "editor.tabSize": 6,
+  "workbench.editor.enablePreview": false,
+  "[scss]": {
+    "editor.suggest.insertMode": "replace"
+  },
+  "editor.minimap.enabled": false,
+  "npm.keybindingsChangedWarningShown": true,
+  "git.openRepositoryInParentFolders": "never",
+
+  // config related to code formatting
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "debug.javascript.terminalOptions": {},
+  "git.confirmSync": false
+}

@@ -1,0 +1,31 @@
+keyword,Operator,data type
+prompt
+typeof
+toLoweCase
+toUpperCase
+split
+indexOf
+parseFloat/parseInt
+toFixed
+var absoluteNumber=Math.abs(number)/var result=Math.round(number)/ Math.ceil/ Math.floor/Math.random/Math.max
+date
+length
+#if else
+#loop-for,while loop,do while loop
+#switch,case,break,default
+#function-return
+#array-push,pop,unshift,shift,slice
+#object
+
+
+
+factorial , factorialWhile , factorialRecursive 
+febonacci , febonacciRecursive , febonacciSeriesRecursive
+inchtofeet , leapYear
+checkPripe , constlet
+
+
+addEventListener , querySelector , querySelectorAll
+innerHtml , innerText , setAttibute , createElement , 
+parentNode , lastChild , removeChild , appendChild
+(parameter.target) 

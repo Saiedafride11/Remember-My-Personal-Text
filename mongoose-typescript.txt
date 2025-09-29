@@ -1,0 +1,147 @@
+mongos --version
+
+npm init --y
+npm install typescript --save-dev
+npm install express --save
+npm install mongoose --save
+npm i ts-node-dev (typescript chalate, package.json e script likbo)
+npm i cors
+tsc --init (tsconfig.js - file create)
+
+
+
+const express = require("express");
+const app = express();
+const port = 5000;
+const mongoose = require("mongoose");
+
+//using cors
+app.use(cors());
+
+//parse data
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+async function bookCollection() {
+  try {
+    await mongoose.connect("mongodb://127.0.0.1:27017/bookCollection");
+    console.log("Database connected successfull");
+  } catch (err) {
+    console.log("Failed to database connection error", err);
+  }
+}
+bookCollection();
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
+
+
+//--------------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------------
+import cors from "cors";
+import express, { Application, NextFunction, Request, Response } from "express";
+import { Schema, model } from "mongoose";
+import mongoose from "mongoose";
+const port: number = 5000;
+
+const app: Application = express();
+
+//using cors
+app.use(cors());
+
+//parse data
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.get("/", (req: Request, res: Response, next: NextFunction) => {
+  interface IBook {
+    title: string;
+    author: [string];
+    genre: string;
+    publicationYear: number;
+    publisher: {
+      name: string;
+      location: string;
+    };
+    reviews: [
+      {
+        user: string;
+        comment: string;
+      }
+    ];
+    rating?: number;
+    price: number;
+  }
+
+  const bookSchema = new Schema<IBook>({
+    title: { type: String, required: true, unique: true },
+    author: [String],
+    genre: { type: String, required: true },
+    publicationYear: { type: Number, required: true },
+    publisher: {
+      name: { type: String, required: true },
+      location: { type: String, required: true },
+    },
+    reviews: [
+      {
+        user: { type: String, required: true },
+        comment: { type: String, required: true },
+      },
+    ],
+    rating: { type: Number },
+    price: { type: Number, required: true },
+  });
+
+  // 3. Create a Model.
+  const Book = model<IBook>("Book", bookSchema);
+
+  const createBookToDb = async () => {
+    const book = new Book({
+      title: "Book 1",
+      author: ["Author 1", "Author 2"],
+      genre: "Mystery",
+      publicationYear: 2020,
+      publisher: {
+        name: "Publisher A",
+        location: "City A",
+      },
+      reviews: [
+        {
+          user: "User 1",
+          comment: "Great book!",
+        },
+        {
+          user: "User 2",
+          comment: "Interesting plot",
+        },
+      ],
+      rating: 4.5,
+      price: "90",
+    });
+    await book.save();
+  };
+  createBookToDb();
+
+  // res.send("Hello World!");
+  // next();
+});
+
+
+async function bookCollection() {
+  try {
+    await mongoose.connect("mongodb://127.0.0.1:27017/bookCollection");
+    console.log("Database connected successfull");
+
+    app.listen(port, () => {
+      console.log(`Server listening on port ${port}`);
+    });
+  } catch (err) {
+    console.log("Failed to database connection error", err);
+  }
+}
+bookCollection();

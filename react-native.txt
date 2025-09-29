@@ -1,0 +1,228 @@
+View
+Text
+Image (blurRadius={3})
+ImageBackground
+<Image resizeMode="stretch" style={{height: 180, width: 200}} source={require('./assets/favicon.png')}/>
+<Image resizeMode="cover" style={{height: 180, width: 200}} source={{uri : 'https://picsum.photos/200'}}/>
+Button
+Pressable
+TouchableOpacity
+TouchableHighlight
+TouchableWithoutFeedback
+SafeAreaView
+ScrollView
+StyleSheet
+FlatList, contentContainerStyle, data, keyExtractor, renderItem, ItemSeparatorComponent
+SectionList, sections, keyExtractor, renderItem, renderSectionHeader
+navigation,
+route.params.jaPassKoresiTarName
+Linking.openURL()
+TextInput (multiline, secureTextEntry--password,,,, autoCapitalize={'none'} || 'words', numberOfLines={numberOfLines})
+ActivityIndicator (loading)
+useWindowDimensions (height, width)
+AsyncStorage
+Tab.Screen (tabBarIcon, tabBarBadge)
+DrawerLayoutAndroid
+
+horigontal={true || false}
+inverted (reverse item)
+numColumns={2}
+
+
+Linking.openURL(wikiLink)
+navigation.goBack()
+
+onPress={() => navigation.navigate("ScreenA")}
+onPress={() => navigation.goBack()}
+onPress={() => navigation.replace("ScreenA")}
+onPress={() => navigation.openDrawer()}
+onPress={() => navigation.closeDrawer()}
+onPress={() => navigation.toggleDrawer()}
+onPress={() => navigation.setParams({ itemId: 14})}
+
+
+onPress
+onLongPress --(delayLongPress={2000})
+onChangeText
+onPressFunction
+
+********** React Native cli*************
+npx react-native init MyTestApp
+npx react-native init ProjectName --version 0.68.2
+npm install -g react-native-cli && npm install -g react-native
+npm i react-native-reanimated@2.10.0
+npm install --save react-native-reanimated@2.9.0
+
+npm i react-native-gesture-handler
+
+-------------------
+cd ./android
+./gradlew clean
+-------------------
+1. Uninstall drawer packages
+2. cd Android
+3. gradlew clean
+4. Install packages again
+5. npm start -- --reset-cache --
+6. npm start
+
+i had the same problem. Im opened the project in Android Studio and then i install Cmake. Going to Tools -> SDKManager and check Cmake box.
+Wait the installation and thats it.
+
+
+********** Expo *************
+npm install --global expo-cli
+expo init AwesomeProject
+expo start --tunnel
+expo start --ios
+npm install redux react-redux @reduxjs/toolkit
+expo install react-native-safe-area-context
+
+expo install firebase@9.7.0 [ firebase ]
+
+anroaid studio (apps)
+npm start run-anroaid
+
+**** fonts
+react-native.config.js
+module.exports = {
+    assets: ['./assets/fonts']
+}
+------------------
+expo install expo-font
+expo install expo-font @expo-google-fonts/inter
+-------------
+
+**** navigation
+npm install @react-navigation/native
+expo install react-native-screens react-native-safe-area-context
+npm install @react-navigation/native-stack   [ Ekta skin er upor r akta skin ante use hoi ]
+
+*** svg
+expo install react-native-svg
+
+********* Extantion
+ES7 React/Redux/GraphQL/React-Native snippets
+rnfs
+
+** show message
+npm i react-native-flash-message
+
+*****
+
+<TextInput 
+		multiline
+        	maxLength={5}
+       		keyboardType="phone-pad"
+		editable={true || false}
+            placeholder="Type The Planet Name"
+            placeholderTextColor={colors.white}
+            autoCorrect={false}
+            style={styles.searchInput}
+            onChangeText={ (text) => searchFilter(text)}
+/>
+
+
+ <Pressable
+        onPress={onPressHandler}
+        hitSlop={{ top: 10, bottom: 10, right: 10, left: 10 }}
+        android_ripple={{color:'#00f'}}
+        style={({ pressed }) => [
+          { backgroundColor: pressed ? '#dddddd' : '#00ff00' },
+          styles.button
+        ]}
+      />
+
+
+refreshControl={
+        <RefreshControl
+          refreshing={true || false}
+          onRefresh={onRefresh}
+          colors={['#ff00ff']}
+        />
+      }
+
+
+  // <FlatList
+      //       contentContainerStyle={styles.list}
+      //       data={PLANET_LIST}
+      //       keyExtractor={( item ) => item.name}
+      //       renderItem={({ item }) => {
+      //                   const { name, color } = item;
+      //             return (
+      //                   <Pressable onPress={ () => {
+      //                         navigation.navigate("Details", { planet: item})
+      //                   }} style={styles.item}>
+      //                         <View style={{ flexDirection: "row", alignItems: "center"}}>
+      //                               <View style={[styles.circle, { backgroundColor: color }]}/>
+      //                               <Text preset="h4" style={styles.itemName}>{ name }</Text>
+      //                         </View>
+      //                         <AntDesign name="right" size={18} color="white" />
+      //                   </Pressable>
+      //             );
+      //       }}
+      //       ItemSeparatorComponent={ () => <View style={styles.separator}></View>}
+      // />
+
+
+<SectionList
+      keyExtractor={(item, index) => index.toString()}
+      sections={DATA}
+      renderItem={({ item }) => (
+        <Text style={styles.text}>{item}</Text>
+      )}
+      renderSectionHeader={({section})=>(
+        <View style={styles.item}>
+          <Text style={styles.text}>{section.title}</Text>
+        </View>
+      )}
+    />
+
+
+	{
+        Items.map((object) => {
+          return (
+            <View style={styles.item} key={object.key}>
+              <Text style={styles.text}>{object.item}</Text>
+            </View>
+          )
+        })
+      }
+--------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+choco install -y nodejs.install python2 jdk8
+
+
+####### Farazy max it
+npx create-expo-app@latest --template blank ./
+https://docs.expo.dev/router/installation/#manual-installation
+npx @react-native-community/cli init AwesomeProject 
+
+npm install @expo/vector-icons
+
+C:\Users\pc\AppData\Local\Android\Sdk
+------------------------
+npx create-expo-app@latest
+npm run reset-project
+
+
+  <Image
+        source={require("../assets/images/agent_1.png")}
+        style={{
+          width: Dimensions.get("screen").width * 0.85,
+          height: 280,
+          resizeMode: "contain",
+        }}
+      />
+ paddingTop: Platform.OS == "android" ? 30 : 40,
+
+
+
+
+
+
+
+
+

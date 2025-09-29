@@ -1,0 +1,6 @@
+varriable
+consition
+array 
+loop
+funtion
+objet

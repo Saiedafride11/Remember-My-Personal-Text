@@ -1,0 +1,57 @@
+npm install redux react-redux
+npm install redux react-redux @types/react-redux (typescript e add korte chaile)
+
+
+------------------------ Anisul islam -------------------------
+npm init -y
+npm install redux
+npm i redux-logger
+npm i redux-thunk
+npm i @reduxjs/toolkit
+npm i uuid ( unique id create)
+npm i redux-persist
+npm i redux-devtools-extension
+npx create-react-app my-app --template redux (redux-toolkit)
+
+
+state
+action
+action.type
+createStore, combineReducers, applyMiddleware 
+getState
+dispatch
+subscribe
+Provider store={store}
+useSelector, useDispatch
+
+*** redux toolkit
+createSlice
+configureStore
+reducer
+extraReducers: (builder) => {
+            builder.addCase(fetchPosts.pending, (state) => {
+                  state.isLoading = true;
+            });
+            builder.addCase(fetchPosts.fulfilled, (state, action) => {
+                  state.isLoading = false;
+                  state.posts = action.payload;
+                  state.error = null;
+            });
+            builder.addCase(fetchPosts.rejected, (state, action) => {
+                  state.isLoading = false;
+                  state.posts = [];
+                  state.error = action.error.message;
+            });
+       }
+------------------------------------------------------------------------------
+************* RTK query
+
+keepUnusedDataFor: 5 // 5s por page data load hobe
+
+const { data:videos, isLoading, isError } = useGetVideosQuery( undefined, {
+        refetchOnFocus: true, // ak window teke, abar agei window te gele refresh nibe
+        refetchOnReconnect: true,  //net chole gele, abr net asle refresh nibe page
+        refetchOnMountOrArgChange: true // joto bat asbo totobar load nibe, true false na diye chaile second dite parbo
+    	skip: true // page reload on/off
+});
+.unwrap() // .then or async await banaite ata use korbo
