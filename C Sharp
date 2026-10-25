@@ -1,0 +1,12 @@
+## Interface ---- interface IStudent --- { void Study() } --- Interface হলো একটা RULE / CONTRACT।
+## Field vs Property --- private string name = "kamal" VS private string name ... public string Name { get { return name;} set{ name = value } }
+## Method --- Drive() → public void Drive() { }
+## Constructor --- public Student(int id, string name) { Id = id; Name = name; }
+## Class -- Object -- Property / Data -- Method
+
+################## The 4 Main Concepts of OOP ###################
+## Encapsulation - Access Modifier holo private, public, protected, internal.... r setar full process holo Encapsulation .... Keep data protected and control how it is accessed or changed.
+## Inheritance - আমি Parent-এর জিনিস পাব.... One class can inherit features from another class.
+## Polymorphism - আমি Parent-এর method পেয়েছি, কিন্তু আমি চাইলে সেটাকে নিজের মতো করে চালাতে পারি ### static, virtual, override ----- The same method/interface can behave differently for different objects.
+## Abstraction - দরকারি জিনিস দেখানো, ভিতরের complicated কাজ লুকিয়ে রাখা..... Abstraction means hiding unnecessary implementation details and exposing only what the user needs. ----- abstract class Animal { public abstract void MakeSound(); }
+## Static - Object লাগলে → Non-static (dynamic info) || Object না লাগলে → Static ( common info ) || public static void SchoolName() { Console.WriteLine("ABC School")' }
